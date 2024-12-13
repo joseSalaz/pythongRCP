@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package productos;
+
+service ProductosService {
+  rpc CreateProducto (Producto) returns (Producto);
+  rpc ReadProducto (ProductoRequest) returns (Producto);
+  rpc UpdateProducto (Producto) returns (Producto);
+  rpc DeleteProducto (ProductoRequest) returns (Empty);
+}
+
+message Producto {
+  int32 id = 1;
+  string nombre = 2;
+  string descripcion = 3;
+  float precio = 4;
+  int32 stock = 5;
+}
+
+message ProductoRequest {
+  int32 id = 1;
+}
+
+message Empty {}
