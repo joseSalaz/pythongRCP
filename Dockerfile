@@ -16,7 +16,7 @@ COPY productos.proto /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Exponer el puerto para el servicio gRPC
-EXPOSE 8000
+EXPOSE 50051
 
 # Comando para iniciar el servidor
 CMD ["python", "server.py"]
